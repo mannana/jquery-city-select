@@ -33,15 +33,13 @@ requirejs(["jquery","data","Province","City","Area"],function($,data,Province,Ci
 					this.level2 =this.level1[i].districts;
 					this.city = new City(this.container,this.level2);
 					this.level3 = this.level2.length?this.level2[0].districts:[];		
-					this.Area = new Area(this.container,this.level3);
-					
+					this.Area = new Area(this.container,this.level3);				
 					return;
 				}
 			}
 		},
 		handleCityChange: function(e,adcode) {
 			var i,len=this.level2.length;
-			console.log(len);
 			for(i=0; i<len; i++){
 				if(this.level2[i].adcode==adcode){
 					this.level3 = this.level2[i].districts;

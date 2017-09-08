@@ -20,7 +20,6 @@ define(function(){
                     var str = '<select class="area">'+optionsStr+'</select>';
                     this.container.append(str);
         			this.ele = this.container.find('.area');
-        			// this.ele.on('click',$.proxy(this.handleSelectChange,this));
                 }else {
                     this.ele.html(optionsStr);
                 }
